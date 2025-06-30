@@ -3,25 +3,41 @@ import React from 'react';
 
 const Page = () => {
     return (
-        <div className='h-screen bg-gradient-to-b  from-[#f9f5ff] to-[#b6a7ca] '>
-            <Link href="/">
-                <img className='md:pl-10 pt-10  md:w-60 w-48 mx-auto md:ml-0' src="/Images/Auth/logo2.png" alt="" />
-            </Link>
-            <div className='flex justify-center mt-20'>
-                <div className='min-w-80'>
-                    <h2 className='text-3xl font-medium text-center'>Forgot Password?</h2>
-                    <p className='text-center mt-5 text-gray-600'>Please enter your email address <br /> to reset
-                        your password.</p>
-                    <div className='mt-5'>
-                        <label className='font-semibold' htmlFor="email">Email</label>
-                        <input placeholder='Enter your email' className='mt-2 w-full p-2 border border-green-400 rounded-md focus:outline-0 ring-0 bg-white' type="email" name="email" id="email" />
+        <div className='flex items-center justify-center min-h-screen bg-[#ffffff]'>
+            <div className='grid lg:grid-cols-2 gap-5 items-center bg-[#fbf8f0] w-11/12 sm:w-1/2 mx-auto rounded-xl border-2 shadow-lg'>
+                <form className='p-8' action="">
+                    <img className='w-20 mb-6 ' src="/Images/Auth/lion.png" alt="Logo" />
+                    <h2 className='text-3xl font-semibold my-3 '>Forgot Password</h2>
+
+                    {/* Email input */}
+                    <div className='flex flex-col gap-2'>
+                        <label htmlFor="email">Your Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#dcb66b]'
+                            placeholder='Enter your email'
+                            required
+                        />
                     </div>
-                    <Link href={'/verify-otp'} className='mt-5 block'>
-                        <button className='cursor-pointer w-full p-2 bg-green-400 font-semibold text-white rounded-md'>Send OTP</button>
-                    </Link>
+
+                    {/* Get OTP Button */}
+                    <button className='w-full cursor-pointer bg-[#000] text-[#dcb66b] font-semibold py-3 rounded-md mt-4 hover:bg-[#333] transition duration-300'>
+                        Get OTP
+                    </button>
+
+                    {/* Sign In Link */}
+                    <p className='text-center mt-4 text-sm text-gray-500'>
+                        Remember your password? <Link href="/signin" className='font-semibold text-[#000] hover:underline'>Sign In</Link>
+                    </p>
+                </form>
+
+                {/* Right side image (optional) */}
+                <div className='lg:block hidden'>
+                    <img className='h-full w-full object-cover rounded-r-xl' src="/Images/Auth/forgotpassword.png" alt="Forgot Password Illustration" />
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

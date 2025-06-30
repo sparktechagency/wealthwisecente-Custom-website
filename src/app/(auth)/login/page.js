@@ -1,69 +1,53 @@
-'use client'
-import React, { useState } from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 const Page = () => {
-    // State to toggle password visibility
-    const [showPassword, setShowPassword] = useState(false);
-
-    // Function to toggle password visibility
-    const togglePassword = () => {
-        setShowPassword(prevState => !prevState);
-    };
-
     return (
-        <div className='h-screen bg-gradient-to-b from-[#f9f5ff] to-[#b6a7ca]'>
-             <Link href="/">
-                <img className='md:pl-10 pt-10  md:w-60 w-48 mx-auto md:ml-0' src="/Images/Auth/logo2.png" alt="" />
-            </Link>
-            <div className='flex justify-center mt-20'>
-                <div className='min-w-80'>
-                    <h2 className='text-3xl font-medium text-center'>Login</h2>
-                    <div className='mt-5'>
-                        <label className='font-semibold' htmlFor="email">Email</label>
+        <div className='flex items-center justify-center min-h-screen bg-[#ffffff]'>
+            <div className='grid lg:grid-cols-2 gap-5 items-center bg-[#fbf8f0] w-11/12 sm:w-1/2 mx-auto rounded-xl border-2 shadow-lg'>
+                <form className='p-8' action="">
+                    <img className='w-20 mb-6' src="/Images/Auth/lion.png" alt="Logo" />
+                    <h2 className='text-3xl font-semibold my-3'>Sign In Here</h2>
+
+                    <div className='flex flex-col gap-2'>
+                        <label htmlFor="email">Email</label>
                         <input
-                            placeholder='Enter your email'
-                            className='mt-2 w-full p-2 border border-green-400 rounded-md focus:outline-0 ring-0 bg-white'
                             type="email"
-                            name="email"
-                            id="email"
+                            id='email'
+                            className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#dcb66b]'
+                            placeholder='Enter your email'
+                            required
                         />
                     </div>
-                    <div className='mt-5'>
-                        <label className='font-semibold' htmlFor="password">Password</label>
-                        <div className='relative'>
-                            <input
-                                placeholder='Enter your password'
-                                className='mt-2 w-full p-2 border border-green-400 rounded-md focus:outline-0 ring-0 bg-white'
-                                type={showPassword ? "text" : "password"} // Toggle password visibility
-                                name="password"
-                                id="password"
-                            />
-                            {/* Show/Hide Password Icon */}
-                            <button
-                                type="button"
-                                onClick={togglePassword}
-                                className='absolute cursor-pointer right-3 top-[30px] transform -translate-y-1/2 text-gray-500'
-                            >
-                                {!showPassword ? '🙈' : '👁️'}
-                            </button>
+                    {/* Password */}
+                    <div className='flex flex-col gap-2 mt-4'>
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id='password'
+                            className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#dcb66b]'
+                            placeholder='Enter your password'
+                            required
+                        />
+                    </div>
+                    {/* Remember me and Forgot password */}
+                    <div className='flex justify-between items-center mt-4'>
+                        <div className='flex items-center gap-2'>
+                            <input type="checkbox" id='remember' />
+                            <label htmlFor="remember">Remember me</label>
                         </div>
+                        <Link href="/forgot-password" className='font-semibold text-[#000] hover:underline '>Forgot Password?</Link>
                     </div>
-                    <div className='flex justify-between items-center my-5'>
-                        <label className='' htmlFor="remember">
-                            <input className='' type="checkbox" name="remember" id="remember" />
-                            <span className='ml-2 text-gray-600'>Remember me</span>
-                        </label>
-                        <Link className='text-blue-600 text-sm' href="/forgot-password">Forgot Password</Link>
-                    </div>
-                    <div className='mt-5'>
-                        <button className='cursor-pointer w-full p-2 bg-green-400 font-semibold text-white rounded-md'>Login</button>
-                    </div>
-                    <p className='text-center mt-5 text-gray-600'>Don't have an account? <Link className='text-blue-600' href="/signup-step" >Sign Up</Link></p>
+                    <button className='w-full cursor-pointer bg-[#000] text-[#dcb66b] font-semibold py-3 rounded-md mt-4 hover:bg-[#333] transition duration-300'>Login</button>
+                    <p className='text-center mt-4 text-sm text-gray-500'>Don't have an account? <Link href="/signup" className='font-semibold text-[#000] hover:underline'>Sign Up</Link></p>
+                </form>
+                {/* Right side image */}
+                <div className='lg:block hidden'>
+                    <img className='h-full w-full object-cover rounded-r-xl' src="/Images/Auth/login.png" alt="Login Illustration" />
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Page;
