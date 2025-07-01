@@ -13,7 +13,7 @@ const UserSidebar = ({ routeList }) => {
         // Clear user session or token here
         localStorage.removeItem('userToken'); // Example of clearing a token 
         message.success('Logout successful! Redirecting to home page...');
-        
+
         console.log('User logged out successfully! Redirecting to home page...');
     }
 

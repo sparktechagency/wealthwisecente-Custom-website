@@ -53,7 +53,9 @@ export default function Layout({ children }) {
                 {/* Company Header */}
                 <div className="flex flex-1">
                     {/* Sidebar */}
-                    <UserSidebar routeList={routeList} />
+                    <div className="hidden md:block">
+                        <UserSidebar routeList={routeList} />
+                    </div>
                     {/* Main Content Area */}
                     <div className="flex-1 flex flex-col">
                         <UserHeader routeList={routeList} className="" />

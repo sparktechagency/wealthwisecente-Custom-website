@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { IoSearch } from 'react-icons/io5';
 
@@ -25,7 +26,7 @@ const Page = () => {
     ];
 
     return (
-        <div className="px-5 py-5">
+        <div className="md:px-5 md:py-5 p-2">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold">Quote with your.</h1>
                 <div className='relative'>
@@ -45,7 +46,7 @@ const Page = () => {
                 {companies
                     .filter(company => company.name.toLowerCase().includes(searchQuery.toLowerCase()))
                     .map((company, index) => (
-                        <div key={index} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out border-2 border-[#dcb66b] flex items-center">
+                        <Link href={`/user/${index}`} key={index} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out border-2 border-[#dcb66b] flex items-center">
                             <img
                                 src="/Images/Home/brands1.png"
                                 alt="Shell Logo"
@@ -62,7 +63,7 @@ const Page = () => {
                                     {company.website}
                                 </a>
                             </div>
-                        </div>
+                        </Link>
                     ))
                 }
             </div>
