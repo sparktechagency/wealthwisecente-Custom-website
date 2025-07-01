@@ -31,23 +31,22 @@ const OurInsurance = () => {
             </h2>
 
             {/* Slider Container */}
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center w-full md:w-3/4 mx-auto">
                 {/* Left Arrow */}
                 <button
                     onClick={prevSlide}
-                    className="absolute left-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
+                    className="absolute cursor-pointer left-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
                 >
                     <FaChevronLeft size={24} />
                 </button>
 
                 {/* Slider Content */}
-                <div className="w-full md:w-1/2 mx-auto bg-gray-100 p-8 rounded-xl text-center">
+                <div className="w-full md:w-3/4 mx-auto bg-[#fbf8f0] p-8 rounded-xl text-center">
                     <div className="mb-6">
                         {/* Image */}
                         <img
-                            src={clients[activeIndex].image}
-                            alt={clients[activeIndex].name}
-                            className="w-full h-64 object-cover rounded-full mx-auto transition-all duration-300"
+                            src={'/Images/Home/OurProfessionalTeam1.jpg'}
+                            className="!w-64 !h-64 object-cover rounded-full mx-auto transition-all duration-300"
                         />
                     </div>
 
@@ -62,7 +61,7 @@ const OurInsurance = () => {
                 {/* Right Arrow */}
                 <button
                     onClick={nextSlide}
-                    className="absolute right-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
+                    className="absolute cursor-pointer right-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
                 >
                     <FaChevronRight size={24} />
                 </button>
@@ -74,7 +73,7 @@ const OurInsurance = () => {
                     <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
-                        className={`h-3 w-3 rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-400'}`}
+                        className={`h-3 w-3 cursor-pointer rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-400'}`}
                     ></button>
                 ))}
             </div>
