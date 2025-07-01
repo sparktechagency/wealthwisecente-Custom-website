@@ -35,7 +35,7 @@ const OurInsurance = () => {
                 {/* Left Arrow */}
                 <button
                     onClick={prevSlide}
-                    className="absolute cursor-pointer left-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
+                    className="absolute cursor-pointer left-5 text-[#dcb66b] bg-gray-900 p-3 rounded-full opacity-70  transition"
                 >
                     <FaChevronLeft size={24} />
                 </button>
@@ -61,7 +61,7 @@ const OurInsurance = () => {
                 {/* Right Arrow */}
                 <button
                     onClick={nextSlide}
-                    className="absolute cursor-pointer right-5 text-white bg-gray-800 p-3 rounded-full opacity-70 hover:opacity-100 transition"
+                    className="absolute cursor-pointer right-5 text-[#dcb66b] bg-gray-900 p-3 rounded-full opacity-70  transition"
                 >
                     <FaChevronRight size={24} />
                 </button>
@@ -73,7 +73,7 @@ const OurInsurance = () => {
                     <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
-                        className={`h-3 w-3 cursor-pointer rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-400'}`}
+                        className={`h-3 w-3 cursor-pointer rounded-full ${index === activeIndex ? 'bg-[#dcb66b]' : 'bg-gray-400'}`}
                     ></button>
                 ))}
             </div>
