@@ -1,5 +1,6 @@
 
 import Expriences from '@/Components/Common/Expriences';
+import ProvideProfessional from '@/Components/Common/ProvideProfessional';
 import AboutUs from '@/Components/Home/AboutUs';
 import AccessCarriers from '@/Components/Home/AccessCarriers';
 import Brands from '@/Components/Home/Brands';
@@ -16,6 +17,7 @@ const Page = () => {
             <AccessCarriers />
             <AboutUs />
             <Organizations />
+            <ProvideProfessional />
 
         </div>
     );
