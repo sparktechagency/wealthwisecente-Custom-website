@@ -4,6 +4,11 @@ import Header from "@/Components/Common/Header";
 import Footer from "@/Components/Common/Footer";
 import UserHeader from "@/Components/userDashboard/UserHeader";
 import UserSidebar from "@/Components/userDashboard/UserSidebar";
+import { RiDashboardFill } from "react-icons/ri";
+import { HiMiniClipboardDocumentList } from "react-icons/hi2";
+import { LuCircleUser } from "react-icons/lu";
+
+
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -22,6 +27,25 @@ export const metadata = {
 
 // not root layout this is main layout
 
+const routeList = [
+    {
+        name: "Dashboard",
+        path: "/user",
+        icon: <RiDashboardFill />
+    },
+    {
+        name: "My Applied Insurance",
+        path: "/user/my-applied-insurance",
+        icon: <HiMiniClipboardDocumentList />
+    },
+    {
+        name: "My Profile",
+        path: "/user/profile",
+        icon: <LuCircleUser />
+    },
+]
+
+
 export default function Layout({ children }) {
     return (
         <div>
@@ -29,10 +53,10 @@ export default function Layout({ children }) {
                 {/* Company Header */}
                 <div className="flex flex-1">
                     {/* Sidebar */}
-                    <UserSidebar />
+                    <UserSidebar routeList={routeList} />
                     {/* Main Content Area */}
                     <div className="flex-1 flex flex-col">
-                        <UserHeader className="" />
+                        <UserHeader routeList={routeList} className="" />
                         <div className="flex-1 md:px-10 md:py-5 p-5 bg-white ">
                             {children}
                         </div>
