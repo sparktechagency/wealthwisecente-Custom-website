@@ -5,7 +5,7 @@ const Page = () => {
     return (
         <div>
             {/* Header Section */}
-            <div className='bg-[url("/Images/Common/headerBg.jpg")] bg-cover bg-center h-[300px]'>
+            <div className='bg-[url("/Images/Common/headerBg.jpg")] bg-cover bg-center h-[200px] md:h-[300px] '>
                 <div className='lg:px-20 px-5 py-10'>
                     <h1 className='text-black lg:text-5xl text-3xl font-bold'>Contact Us</h1>
                     <p className='mt-2'>
