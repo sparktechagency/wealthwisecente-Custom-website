@@ -19,7 +19,6 @@ const OurProfessionalTeam = () => {
                 }
             </div>
 
-
         </div>
     );
 }

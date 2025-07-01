@@ -8,6 +8,7 @@ import Brands from '@/Components/Home/Brands';
 import ContactForm from '@/Components/Home/ContactForm';
 import Hero from '@/Components/Home/Hero';
 import Organizations from '@/Components/Home/Organizations';
+import OurInsurance from '@/Components/Home/OurInsurance';
 import React from 'react';
 
 const Page = () => {
@@ -22,6 +23,8 @@ const Page = () => {
             <ProvideProfessional />
             <ContactForm />
             <OurProfessionalTeam />
+            <OurInsurance />
+
         </div>
     );
 }
