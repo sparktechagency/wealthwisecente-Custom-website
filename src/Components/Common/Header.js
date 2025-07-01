@@ -81,7 +81,7 @@ const Header = () => {
                             !menuOpen ?
                                 <IoIosMenu className='text-4xl' />
                                 :
-                                <RxCross1 className='text-4xl'  />
+                                <RxCross1 className='text-4xl' />
                         }
                     </button>
                 </div>
@@ -89,28 +89,28 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="md:hidden bg-[#000] text-[#ffffff] flex flex-col items-center py-4">
-                    <Link className='mt-3' href="/" passHref>
+                <div className="md:hidden bg-[#000] text-[#ffffff] border-b-2 border-[#dcb66b] flex flex-col items-center py-4">
+                    <Link onClick={() => setMenuOpen(false)} className='mt-3' href="/" passHref>
                         <span className={`py-2 px-6 hover:text-[#dcb66b] ${isActiveRoute == '/' ? 'text-[#dcb66b]' : ''}`}>
                             Home
                         </span>
                     </Link>
-                    <Link className='mt-3' href="/about-us" passHref>
+                    <Link onClick={() => setMenuOpen(false)} className='mt-3' href="/about-us" passHref>
                         <span className={`py-2 px-6 hover:text-[#dcb66b] ${isActiveRoute == '/about-us' ? 'text-[#dcb66b]' : ''}`}>
                             About Us
                         </span>
                     </Link>
-                    <Link className='mt-3' href="/our-services" passHref>
+                    <Link onClick={() => setMenuOpen(false)} className='mt-3' href="/our-services" passHref>
                         <span className={`py-2 px-6 hover:text-[#dcb66b] ${isActiveRoute == '/our-services' ? 'text-[#dcb66b]' : ''}`}>
                             Our Services
                         </span>
                     </Link>
-                    <Link className='mt-3' href="/contact-us" passHref>
+                    <Link onClick={() => setMenuOpen(false)} className='mt-3' href="/contact-us" passHref>
                         <span className={`py-2 px-6 hover:text-[#dcb66b] ${isActiveRoute == '/contact-us' ? 'text-[#dcb66b]' : ''}`}>
                             Contact Us
                         </span>
                     </Link>
-                    <Link className='mt-3' href="/login" passHref>
+                    <Link onClick={() => setMenuOpen(false)} className='my-5' href="/login" passHref>
                         <span className={`py-2 px-6 bg-[#1b1b1b] text-[#dcb66b] rounded-md font-semibold ${isActiveRoute == '/login' ? 'text-[#dcb66b]' : ''}`}>
                             Login
                         </span>
