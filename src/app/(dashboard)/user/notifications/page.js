@@ -44,15 +44,15 @@ const Page = () => {
             <h2 className="text-3xl font-semibold mb-6">Notifications</h2>
 
             {/* List of notifications */}
-            <div className="space-y-4">
+            <div className="space-y-2">
                 {notificationsList.map((notification) => (
                     <div
                         key={notification.id}
-                        className={`p-4 border rounded-lg flex items-center justify-between ${notification.status === 'unread' ? 'bg-blue-50 border-blue-300' : 'bg-gray-50 border-gray-300'}`}
+                        className={`p-4 border cursor-pointer rounded-lg flex items-center justify-between ${notification.status === 'unread' ? 'bg-blue-50 border-blue-300' : 'bg-gray-50 border-gray-300'}`}
                         onClick={() => handleNotificationClick(notification.id)}
                     >
                         <div>
-                            <h3 className="text-xl font-semibold">{notification.title}</h3>
+                            <h3 className=" font-semibold">{notification.title}</h3>
                             <p className="text-gray-700">{notification.message}</p>
                         </div>
                         <div className="flex justify-between items-center gap-2 mt-2">
