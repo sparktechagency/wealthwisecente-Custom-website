@@ -28,7 +28,7 @@ const Page = () => {
 
                     {/* Sign In Link */}
                     <p className='text-center mt-4 text-sm text-gray-500'>
-                        Remember your password? <Link href="/signin" className='font-semibold text-[#000] hover:underline'>Sign In</Link>
+                        Remember your password? <Link href="/login" className='font-semibold text-[#000] hover:underline'>Sign In</Link>
                     </p>
                 </form>
 
