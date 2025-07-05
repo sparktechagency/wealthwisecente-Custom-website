@@ -80,7 +80,7 @@ const Footer = () => {
             {/* Footer Bottom Section */}
             <div className="bg-gray-800 py-4 mt-10">
                 <div className="container mx-auto px-4 text-center text-gray-400">
-                    <p>&copy; 2023 WealthWise. All rights reserved.</p>
+                    <p>&copy; 2025 WealthWise. All rights reserved.</p>
                 </div>
             </div>
         </footer>
