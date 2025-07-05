@@ -27,6 +27,7 @@ const Page = () => {
     // Handle file upload
     const handleUploadChange = ({ fileList: newFileList }) => {
         setFileList(newFileList);
+        console.log(newFileList);
     };
 
     // Validate upload file type
