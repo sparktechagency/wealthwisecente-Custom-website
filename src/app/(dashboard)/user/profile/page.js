@@ -35,7 +35,7 @@ const Page = () => {
         const isImage = file.type === 'image/jpeg' || file.type === 'image/png';
         if (!isImage) {
             message.error('You can only upload JPG/PNG file!');
-        }   
+        }
         return isImage;
     };
 
